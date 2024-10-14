@@ -1,0 +1,254 @@
+* {   
+    box-sizing: border-box;
+}
+
+/* untuk mengatur tampilan background */
+body {
+    font-family: 'Poppins', sans-serif; 
+    background-color: hsl(0, 0%, 100%); 
+    color: #333;
+    line-height: 1.6;
+}
+
+/* untuk mengatur warna navbar bagian paling atas pada website */
+header {
+    background-color: #f42121;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* untuk mengatur letak huruf pada navbar */
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* untuk mengatur logo atau Rumah Makan Padang */
+header .logo h1 {
+    color: rgb(242, 244, 241);
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* berguna agar fitur-fitur seperrti home, news, about, form, contact, login agar dapat di klik  */
+header ul {
+    list-style: none;
+    display: flex;
+}
+header ul li {
+    margin: 0 10px;
+}
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* untuk memberikan warna jika kursor diarahkan */
+header ul li a:hover {
+    color: #eacc08;
+}
+
+
+/* untuk mengatur tampilan home */
+.hero {
+    background-image: url('baground\ utama.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 120px 20px; 
+    color: white;
+    position: relative;
+}
+
+/* Hal ini bisa digunakan untuk membuat efek gelap, mengurangi kecerahan, atau meningkatkan kontras pada elemen */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+/* membuat judul utama di bagian hero menjadi besar, tebal, menggunakan font cursive "Dancing Script", dan menempatkannya di atas elemen-elemen lain di bagian hero "Selamat Datang Dirumah Makan Padang" */
+.hero h1 {
+    font-size: 42px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    position: relative;
+    z-index: 1;
+    line-height: 1.2;
+}
+
+/* membuat paragraf di bagian hero memiliki jarak di atasnya, ukuran font yang lebih besar, dan menempatkannya di atas elemen-elemen lain di bagian hero "Dijamin enak dan pasti*/
+.hero p {
+    margin-top: 15px;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+}
+
+/* memberikan gaya dasar untuk tombol. Anda dapat menyesuaikannya lebih lanjut dengan menambahkan efek tambahan, seperti shadow (bayangan) atau hover effect yang lebih kompleks. */
+.btn {
+    padding: 10px 30px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50px;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* menambahkan efek visual yang sederhana namun efektif pada tombol, membuatnya lebih menarik dan responsif terhadap interaksi pengguna.*/
+.btn:hover {
+    background-color: #fb0000;
+    transform: translateY(-3px); 
+}
+
+/* memberikan gaya dasar untuk content-section, memungkinkan untuk menampilkan konten utama di halaman web dengan tampilan yang terstruktur dan rapi. */
+.content-section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*  berfungsi untuk mengatur about, contact, login */
+h2 {
+    font-size: 28px;
+    color: #ff0202;
+    margin-bottom: 30px;
+    font-family: 'Dancing Script', cursive;
+   background-color: #e3ccca;
+}
+
+/* memberikan gaya layout yang responsif untuk menampilkan daftar berita atau artikel dengan tampilan yang teratur dan mudah dibaca*/
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* memberikan gaya visual yang menarik dan profesional untuk artikel, membuatnya lebih mudah dibaca dan lebih menarik bagi pengguna. */
+article {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    max-width: 47%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* menambahkan efek visual yang sederhana namun efektif pada artikel, membuatnya lebih menarik dan responsif terhadap interaksi pengguna */
+article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* memberikan gaya visual yang sederhana namun efektif untuk gambar dalam artikel, membuatnya lebih menarik dan lebih mudah dibaca */
+article img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* memberikan gaya visual yang khusus untuk judul tingkat tiga dalam artikel, membuatnya lebih menarik dan mudah dibaca */
+article h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+/* memberikan gaya visual yang sederhana namun elegan untuk paragraf dalam artikel, membuatnya lebih mudah dibaca dan lebih menarik bagi pengguna */
+article p {
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    font-size: 14px;
+}
+
+/*  untuk mengatur bacground form input */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #e3ccca;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* memberikan gaya visual yang sederhana namun efektif untuk label dalam formulir, membuatnya lebih mudah dibaca dan lebih rapi */
+form label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* untuk mengatur fitur login */
+form input[type="text"], 
+form input[type="email"],
+form textarea, 
+form input[type="password"],
+form input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid hsla(0, 0%, 0%, 0.916);
+    border-radius: 8px;
+    font-size: 20px;
+    transition: border-color 0.3s ease;
+}
+
+/* untuk mengatur login */
+form input[type="submit"] {
+    padding: 12px 30px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+}
+
+/* membuat tombol submit di dalam form mengubah warna latar belakangnya menjadi warna hitam tua ketika pengguna mengarahkan kursor mouse ke atas tombol tersebut, memberikan efek visual yang menandakan bahwa tombol tersebut bisa diklik */
+form input[type="submit"]:hover {
+    background-color: #0c0b00;
+}
+
+/* untuk mengatur copyraight */
+footer {
+    background-color: #4b323b;
+    color: rgb(250, 15, 15);
+    padding: 100;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* memberikan gaya visual yang sederhana untuk paragraf di dalam footer, membuatnya lebih mudah dibaca dan lebih konsisten dengan gaya teks di halaman web */
+footer p {
+    font-size: 14px;
+}
+
+/* sederhana dari media query, yang memungkinkan Anda untuk menyesuaikan tampilan website berdasarkan lebar layar perangkat yang digunakan */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    /*berguna untuk membuat layout responsif yang dapat menyesuaikan diri dengan lebar layar yang berbeda */
+    .news-container {
+        flex-direction: column;
+    }

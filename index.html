@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumah Makan Ziska</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <style>
+        /* membantu mengatur tampilan elemen berita (artikel) dalam susunan tiga kolom yang responsif, dengan gambar yang dipotong rapi untuk mengisi area artikel tersebut */
+        .news-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+        .news-container article {
+            flex: 1 1 calc(33.33% - 20px);
+            box-sizing: border-box;
+        }
+        .news-container img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- beberapa item menu yang mengarahkan ke bagian-bagian berbeda di website-->
+            <div class="logo">
+                <h1>Rumah Makan Ziska</h1>
+            </div>
+            <ul>
+                <li><a href="#beranda">Home</a></li>
+                <li><a href="#berita">News</a></li>
+                <li><a href="#tentang">About</a></li>
+                <li><a href="#formulir">Form</a></li>
+                <li><a href="#kontak">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<!-- berfungsi sebagai sambutan di halaman depan situs web. Judul yang menonjol dan tagline dibuat agar pengunjung langsung mengetahui bahwa mereka sedang berada di situs Rumah Makan Padang dan tergugah dengan janji kualitas dari makanan yang ditawarkan -->
+    <section id="beranda">
+        <div class="hero">
+            <h1>Selamat Datang di <span>Rumah Makan Padang</span></h1>
+            <p>Dijamin enak dan pasti kenyang</p>
+        </div>
+    </section>
+
+    <!-- menampilkan daftar menu baru dengan gambar dan judul masing-masing di halaman web-->
+    <section id="berita" class="content-section">
+        <h1>Berita Menu Terbaru</h1>
+        <div class="news-container">
+            <article>
+                <img src="rendang.jpg" alt="Rendang">
+                <h3>Rendang</h3>
+            </article>
+            <article>
+                <img src="ayam bakar.jpg" alt="Ayam Bakar">
+                <h3>Ayam Bakar</h3>
+            </article>
+            <article>
+                <img src="sambal terong teri.jpg" alt="Sambal Terong Penyet">
+                <h3>Sambal Terong Teri</h3>
+            </article>
+            <article>
+                <img src="ikan kembung bakar.jpg" alt="Gulai Cincang">
+                <h3>Ikan Kembung Bakar</h3>
+            </article>
+            <article>
+                <img src="dendeng balado.jpg" alt="Dendeng Balado">
+                <h3>Dendeng Balado</h3>
+            </article>
+            <article>
+                <img src="gulai nangka.jpg" alt="Gulai Nangka">
+                <h3>Gulai Nangka</h3>
+            </article>
+            <article>
+                <img src="sate padang.jpg" alt="Sate Padang">
+                <h3>Sate Padang</h3>
+            </article>
+            <article>
+                <img src="udang saus padang.jpg" alt="Udang Saus Padang">
+                <h3>Cumi Saus Padang</h3>
+            </article>
+            <article>
+                <img src="kepiting saus padang.jpg" alt="Udang Saus Padang">
+                <h3>Kepiting Saus Padang</h3>
+            </article>
+        </div>
+    </section>
+
+    <!--berfungsi membuat halaman yang menampilkan informasi tentang rumah makan dan menyediakan formulir untuk memasukkan pesanan secara online  -->
+    <section id="tentang" class="content-section">
+        <h2>About</h2>
+        <p>"Rasakan kelezatan cita rasa asli Padang yang diwariskan turun temurun di rumah makan kami. Kami menggunakan rempah-rempah pilihan dan bahan-bahan segar untuk menciptakan hidangan yang kaya rasa dan aroma. Suasana hangat dan pelayanan ramah seperti di rumah sendiri akan membuat Anda merasa nyaman menikmati hidangan Padang yang lezat dan menggugah selera."</p>
+    </section>
+
+    <!-- berfungsi untuk membuat formulir pemesanan yang meminta pengguna untuk memasukkan nama, menu yang dipesan, dan alamat. Formulir ini kemudian bisa dikirim dengan menekan tombol "Kirim" -->
+    <section id="formulir" class="content-section">
+        <h2>Masukkan Pesanan Anda</h2>
+        <form action="#">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="menu">Menu</label>
+            <input type="text" id="menu" name="menu" required>
+            
+            <label for="alamat">Alamat:</label>
+            <input type="text" id="alamat" name="alamat" required>
+            
+            <input type="submit" value="Kirim" class="btn">
+        </form>
+    </section>
+
+    <!-- berfubgsi membuat bagian kontak pada halaman web yang berisi informasi tentang email, nomor telepon, dan akun Instagram dari "ziskafebriyanty". Ini memudahkan pengguna untuk melihat cara menghubungi pemilik atau pengelola halaman tersebut -->
+    <section id="kontak" class="content-section">
+        <h2>Contact Person</h2>
+        <p>Email: ziskafebriyanty@gmail.com</p>
+        <p>Telepon: 085796067512</p>
+        <p>Instagram: @ziskafebriyanty14</p>
+    </section>
+
+    <!-- berfungsi membuat form login sederhana yang meminta pengguna untuk memasukkan username dan password, kemudian menekan tombol "Login" untuk memproses masuk ke sistem -->
+    <section id="login" class="content-section login-section">
+        <h2>Login</h2>
+        <form action="#">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <input type="submit" value="Login" class="btn small-btn">
+        </form>
+    </section>
+
+    <!--menambahkan sebuah bagian footer sederhana di bagian paling bawah dari halaman web, yang menampilkan informasi hak cipta untuk "Rumah Makan Ziska Febriyanty"  -->
+    <footer>
+        <p>&copy; copyraight Ziska Febriyanty</p>
+    </footer>
+</body>
+</html>
